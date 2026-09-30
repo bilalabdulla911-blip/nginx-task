@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Kerala - Tourism</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <h2 class="logo">Explore Kerala</h2>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#booking">Booking</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Discover God's Own Country</h1>
+            <p>Explore the beautiful landscapes, beaches, hills and backwaters of Kerala.</p>
+            <button onclick="scrollToDestinations()">Explore Now</button>
+        </div>
+    </section>
+
+    <!-- Destinations -->
+    <section id="destinations" class="destinations">
+        <h2>Popular Destinations</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944"
+                     alt="Alleppey">
+                <div class="card-content">
+                    <h3>Alleppey</h3>
+                    <p>Enjoy beautiful backwaters and traditional houseboat cruises.</p>
+                    <button onclick="showMessage('Alleppey')">Learn More</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2"
+                     alt="Munnar">
+                <div class="card-content">
+                    <h3>Munnar</h3>
+                    <p>Experience peaceful hills, tea plantations and cool weather.</p>
+                    <button onclick="showMessage('Munnar')">Learn More</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57"
+                     alt="Kovalam">
+                <div class="card-content">
+                    <h3>Kovalam</h3>
+                    <p>Relax on beautiful beaches and enjoy amazing sunsets.</p>
+                    <button onclick="showMessage('Kovalam')">Learn More</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <h2>Why Visit Kerala?</h2>
+        <p>
+            Kerala offers a unique combination of beaches, mountains,
+            wildlife, culture and delicious food. It is an ideal destination
+            for nature lovers and adventure seekers.
+        </p>
+    </section>
+
+    <!-- Booking Form -->
+    <section id="booking" class="booking">
+        <h2>Plan Your Trip</h2>
+
+        <form onsubmit="bookTrip(event)">
+            <input type="text" id="name" placeholder="Your Name" required>
+
+            <input type="email" id="email" placeholder="Email Address" required>
+
+            <select id="destination" required>
+                <option value="">Choose Destination</option>
+                <option value="Alleppey">Alleppey</option>
+                <option value="Munnar">Munnar</option>
+                <option value="Kovalam">Kovalam</option>
+            </select>
+
+            <input type="date" id="date" required>
+
+            <button type="submit">Book Now</button>
+        </form>
+
+        <p id="bookingMessage"></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Explore Kerala | Tourism Website</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
